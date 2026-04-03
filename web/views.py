@@ -12,7 +12,6 @@ def register_page(request):
     """Serve registration page with CSRF token"""
     return render(request, 'register.html')
 
-@login_required
 @ensure_csrf_cookie
 def create_job_page(request):
     """Step 1: Create a new job posting"""
