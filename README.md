@@ -1,7 +1,7 @@
 <h1># 📄 Qollab - AI Resume Matcher</h1>
 
 An intelligent API that matches candidate resumes to job descriptions using AI/NLP, providing recruiters with ranked candidate suggestions.
-<br>View project live at: 
+<br>View project live at: https://qollab.onrender.com
 
 <h2>## 🎯 Project Overview</h2>
 
