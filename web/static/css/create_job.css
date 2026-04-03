@@ -1,0 +1,23 @@
+
+/* Adjust padding on main container */
+.container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Reduce margin on progress steps */
+.mb-12 {
+  margin-bottom: 2rem;
+}
+
+/* Slightly reduce card padding on mobile */
+@media (max-width: 640px) {
+  .p-8 {
+    padding: 1.25rem;
+  }
+  
+  .space-y-6 {
+    gap: 1rem;
+  }
+}
+

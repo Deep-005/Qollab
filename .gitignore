@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+env/
+venv/
+ENV/
+
+# Django
+*.log
+db.sqlite3
+db.sqlite3-journal
+/staticfiles/
+/static/
+/media/
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Uploads
+media/resumes/
+uploads/
+
+# Tailwind CLI - IMPORTANT!
+.django_tailwind_cli/
+.tailwind-cache/
+
+# Python package files
+pip-log.txt

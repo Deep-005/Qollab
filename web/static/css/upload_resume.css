@@ -1,0 +1,56 @@
+.container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;  
+  min-width: min(95%, 1100px);
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Increase card sizes slightly */
+.bg-white.rounded-2xl {
+  transform: scale(1.01);
+}
+
+/* Make job title bigger */
+#jobTitle {
+  font-size: 1.75rem;
+}
+
+/* Increase job description text size */
+#jobDesc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Make upload area slightly larger */
+.border-2.border-dashed {
+  padding: 2rem 1rem;
+}
+
+/* Reduce side padding on mobile */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  .p-6 {
+    padding: 1rem;
+  }
+}
+
+/* Make buttons slightly larger */
+button.py-3 {
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+}
+
+/* Increase file list font size */
+#fileList {
+  font-size: 0.9rem;
+}

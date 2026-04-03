@@ -1,0 +1,86 @@
+:root {
+    --primary: #2563eb;
+    --secondary: #10b981;
+    --danger: #ef4444;
+}
+
+/* Layout */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+}
+
+.container {
+    width: min(90%, 1100px);
+    margin: auto;
+    padding: clamp(10px, 2vw, 20px);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: clamp(10px, 2vw, 20px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar a, .navbar button {
+    margin-left: 10px;
+    text-decoration: none;
+    color: black;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Card */
+.card {
+    background: white;
+    padding: clamp(15px, 2vw, 25px);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* Inputs */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: clamp(14px, 1.5vw, 16px);
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-primary { background: var(--primary); color: white; }
+.btn-success { background: var(--secondary); color: white; }
+.btn-danger { background: var(--danger); color: white; }
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

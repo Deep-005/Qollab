@@ -1,0 +1,38 @@
+{% load tailwind_cli %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <title>{% block title %}Qollab{% endblock %}</title>
+
+    <!-- Tailwind CSS CDN -->
+    {% tailwind_css %}
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS (if needed) -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    
+    <!-- Page-specific CSS block -->
+    {% block extra_css %}{% endblock %}
+</head>
+<body class="bg-gray-50">
+
+<main class="container mx-auto">
+    {% block content %}{% endblock %}
+</main>
+
+<!-- Page-specific JavaScript block -->
+{% block extra_js %}{% endblock %}
+
+<script>
+    // Global CSRF token for all fetch requests
+    function getCSRFToken() {
+        return document.querySelector('[name=csrf-token]').getAttribute('content');
+    }
+</script>
+</body>
+</html>
