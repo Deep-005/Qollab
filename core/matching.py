@@ -23,13 +23,6 @@ def extract_keywords(text):
 def keyword_match_details(job_keywords, resume_keywords):
     """
     Return detailed keyword match information
-    
-    Returns:
-        dict: {
-            'matched': list of matched keywords,
-            'missing': list of missing keywords,
-            'percentage': float (0-1)
-        }
     """
     if not job_keywords:
         return {
@@ -52,9 +45,6 @@ def keyword_match_details(job_keywords, resume_keywords):
 def detect_query_type(text):
     """
     Detect if query is a keyword list or full description
-    
-    Returns:
-        str: 'keyword_query' or 'full_description'
     """
     words = text.split()
     
@@ -91,13 +81,6 @@ def keyword_score(job_desc, resume_text):
 def rank_candidates(job_description, resumes):
     """
     Enhanced ranking with keyword breakdown and smart query detection
-    
-    Args:
-        job_description (str): The job description or keyword query
-        resumes (list): List of tuples [(candidate_id, resume_text), ...]
-    
-    Returns:
-        list: Ranked candidates with detailed scores and keyword info
     """
     # Detect query type (keyword search or full description)
     query_type = detect_query_type(job_description)

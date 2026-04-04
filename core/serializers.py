@@ -23,7 +23,6 @@ class MatchScoreSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-# Response Serializers for API endpoints
 class MatchResponseSerializer(serializers.Serializer):
     """Serializer for match results response"""
     resume_id = serializers.IntegerField()

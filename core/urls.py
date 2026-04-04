@@ -14,7 +14,7 @@ urlpatterns = [
     path('jobs/<int:job_id>/', views.JobDetailView.as_view()),
     path('jobs/<int:job_id>/match/', views.MatchCandidatesView.as_view()),
     
-    # Resumes (no candidate endpoints)
+    # Resumes 
     path('resumes/', views.ResumeCreateView.as_view()),
     path('resumes/batch/', views.BatchResumeUploadView.as_view()),
     path('resumes/count/', views.ResumeCountView.as_view()), 

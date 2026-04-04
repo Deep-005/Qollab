@@ -243,7 +243,7 @@ class ResumeCreateView(APIView):
             resume_text = clean_resume_text(manual_text)
             logger.debug(f"Manual text cleaned: {len(resume_text)} chars")
 
-        # Create resume directly (no candidate)
+        # Create resume 
         try:
             resume = Resume.objects.create(
                 resume_text=resume_text,
@@ -593,10 +593,7 @@ class ClearAllResumesView(APIView):
     def delete(self, request):
         try:
             count = Resume.objects.count()
-            
-            # Also delete associated match scores (cascade will handle)
             Resume.objects.all().delete()
-            
             logger.info(f"All {count} resumes deleted by {request.user.username}")
             return Response({
                 "message": f"Successfully deleted {count} resumes",

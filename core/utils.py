@@ -1,4 +1,3 @@
-# utils.py
 import PyPDF2
 from .preprocessing import clean_resume_text
 
